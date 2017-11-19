@@ -31,7 +31,7 @@ public class AccountService {
     }
 
     @RequestMapping(value = "/balance/{id}", method = RequestMethod.GET)
-    public String getAccountBalance(@PathVariable String id) {
+    public String getAccountBalance2(@PathVariable String id) {
         RestTemplate template = new RestTemplate();
         String response1 = template.getForObject("http://foo.com/backend", String.class);
         String response2 = new RestTemplate().getForObject("http://foo.com/backend2", String.class);
