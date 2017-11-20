@@ -30,7 +30,7 @@ public class AccountService {
         return "";
     }
 
-    @RequestMapping(value = "/balance/{idx}", method = RequestMethod.GET)
+    @RequestMapping(value = "/balance/{id}", method = RequestMethod.GET)
     public String getAccountBalance(@PathVariable String id) {
         RestTemplate template = new RestTemplate();
         String response1 = template.getForObject("http://foo.com/backend", String.class);
